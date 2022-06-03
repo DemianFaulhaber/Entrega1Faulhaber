@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="/">Home</a>  
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+        aria-expanded="false">Pacientes</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/riesgose/">Riesgo epidemiológico</a></li>
+        <li><a class="dropdown-item" href="/potencial/">Potencial Riesgo</a></li>
+        <li><a class="dropdown-item" href="/inofensivos/">Inofensivos</a></li>
+        <li><a class="dropdown-item" href="/">Dados de baja</a></li>
+        <li><a class="dropdown-item" href="/">Curados</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="/">Ingresar Paciente</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/riesgose/">Link</a>
+    </li>
+    <form action="/buscar/" method="GET" class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="buscador">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </ul>
+  
+</body>
+
+</html>

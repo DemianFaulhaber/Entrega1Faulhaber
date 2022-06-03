@@ -1,0 +1,42 @@
+{% extends 'plantillacore.html' %}
+{% block title %} buscador {% endblock %}
+{% block script %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+{% endblock %}
+{% block content %}
+    <p>Estás buscando: <strong>{{query}}</strong></p>
+    {% if paci %} 
+        <p>Pacientes encontrados: {{paci|length}} individuos</p>
+        {% for paciente in paci %}
+            <div class="container">
+                <div class="row">
+                <div class="col-md-10">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Pacientes</th>
+                                <th>Afeccion</th>
+                                <th>Fecha de ingreso</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            
+                            <tr>
+                                <td>{{paciente.nombre}}</td>
+                                <td>{{paciente.afeccion}}</td>
+                                <td>{{paciente.fecha_de_ingreso}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Nadie coincide con la busqueda </p>
+    
+    {% endif %}
+{% endblock %}
